@@ -1,0 +1,34 @@
+{
+  "name": "phedrock/jwt",
+  "type": "library",
+  "description": "One more library for generating JSON Web Tokens (JWT) in PHP.",
+  "keywords": [
+    "php",
+    "jwt",
+    "authentication",
+    "json",
+    "tokens",
+    "phedrock"
+  ],
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Phedrock\\Authentication\\Jwt\\": "src/"
+    },
+    "files": [
+      "src/Utils/helpers.php"
+    ]
+  },
+  "authors": [
+    {
+      "name": "Fernando Duarte",
+      "email": "ferchd@outlook.com",
+      "role": "Developer"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": "^8.0",
+    "ext-openssl": "*"
+  }
+}
