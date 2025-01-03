@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types = 1);
+
 use Phedrock\Authentication\Jwt\Exceptions\InvalidAlgorithmNameException;
 use Phedrock\Authentication\Jwt\Exceptions\LibraryNotLoadedException;
 use Phedrock\Authentication\Jwt\Exceptions\OpenSSLKeyLoadException;
@@ -59,7 +61,7 @@ if (!function_exists('openssl_load_key')) {
 }
 
 if (!function_exists('openssl_get_key_size')) {
-    function openssl_get_key_size(OpenSSLAsymmetricKey $key): int
+    function openssl_get_key_size(OpenSSLAsymmetricKey|OpenSSLCertificate $key): int
     {
         return openssl_pkey_get_details($key)['bits'] / 8;
     }
